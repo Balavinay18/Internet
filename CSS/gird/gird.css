@@ -10,11 +10,11 @@
     padding: 1em;
     display: grid;
     grid-template-areas:
-    "one one one two three"
-    "one one one two four"
-    "one one one two five"
-    "one one one two five"
-    "six six six two five";
+    "one one one one two"
+    "three four four five two"
+    "six six seven five two"
+    "six six seven eight two"
+    "nine ten ten ten eleven";
     gap: 1em;
     
 }
@@ -43,4 +43,19 @@
 }
 .six {
     grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.ten {
+    grid-area: ten;
+}
+.eleven {
+    grid-area: eleven;
 }
