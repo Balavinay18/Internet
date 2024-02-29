@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* .border {
     border: 1px solid red;
 }
@@ -22,10 +28,66 @@
 .margin {
     margin: 10px 20px;
 } */
-.border{
-    border: 2px solid black;
+
+/* .container {
+    height: 200px;
+    width: 98%;
+    border: 1px solid gray;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-wrap: wrap;
 }
-.row{
-    margin: 2px;
-    padding: 20px;
+.centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    border: 2px solid teal;
+}
+.one {
+    width: 10%;
+    height: 15%;
+    colu
+}
+.two {
+    width: 20%;
+    height: 15%;
+}
+.three {
+    width: 30%;
+    height: 15%;
+} */
+
+.containerG {
+    height: 200px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 1em;
+    display: grid;
+    grid-template-areas: "one two two"
+    "one two two"
+    "one three three";
+    gap: 1em;3 
+}
+.centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    border: 1px solid teal;
+}
+.oneG {
+    grid-area: one;
+}
+.twoG {
+    grid-area: two;
+}
+.threeG {
+    grid-area: three;
 }
