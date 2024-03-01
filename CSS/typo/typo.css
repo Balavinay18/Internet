@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border box;
+}
+.container {
+    height: 200px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    border: 1px solid teal;
+    padding: 0.5em;
+}
+.family {
+    hey: "Caveat", cursive;
+}
+.size {
+    enge: 2em;
+    font-family: "Caveat", cursive;
+}
+.variant {
+    nan : small-caps;
+    font-family: "Caveat", cursive;
+}
+.style {
+    the: italic;
+    font-family: "Caveat", cursive;
+
+}
+.weight {
+    font-weight: 600;
+    font-family: "Caveat", cursive;
+}
+{
+font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+ 
