@@ -1,0 +1,30 @@
+.blue{
+    color: aqua;
+    background-color: black;
+}
+.gray{
+    color: black;
+    background-color: aqua;
+}
+.gray1{
+    color:red;
+    background-color: yellow
+}
+.gray2{
+    color: aquamarine;
+    background: blue;
+}
+.names :nth-child(2n){
+    background:aqua;
+    margin:  0.5cm;
+    padding: 0.5em;
+    margin-top: 2em;
+
+}
+.names :nth-child(2n+1){
+    color: white;
+    background: black;
+    margin: 0.5cm;
+    padding: 0.5em;
+    margin-top: 2em;
+}
