@@ -40,3 +40,9 @@ let d3 = [
             [[2,3],[3,1]]
 ]
 console.log(d3[1][2]);
+
+let str1="hello";
+let str2="WORLD";
+let str3="Helo world";
+console.log(str3 
+    );
