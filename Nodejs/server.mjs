@@ -1,42 +1,35 @@
-import { createServer } from 'node:http';
-import { json } from 'stream/consumers';
+import { createServer} from 'node:http';
+//const { createServer} = require('node:http')
+const hostname='127.0.0.1';
+const port=3000;
+const server=createServer((req,res) => {
+    console.log('received request...',req.url, req.method);
 
-const hostname = '127.0.0.1';
-const port = 3000;
+    if(req.url=='/'){
+        if(req.method == 'GET'){
+            res.statuscode = 200;
+            res.setHeader('content-type','text/plan');
+            res.setHeader('Access-control-allow-origin',"*");
 
-const server = createServer((req,res) => {
-    console.log('Received request...',req.url, req.mothod);
-
-    if(req.url == '/') {
-        if(req.method == 'GET') {
+            res.end("mithilesh");
+            // console.log(res)
+        }
+        if(req.method == 'option'){
+            res.setHeader('content-type','appliction/json');
+            res.setHeader('Access-control-allow-orgin','http://127.0.0.1:5500');
+            res.setHeader('Acess-control-allow-method',"POST , GET , OPTIONS");
+            res.setHeader('Access-control-allow-headers','*');
+        }
+        if (req.method == 'POST') {
+            console.log('post method...')
             res.statusCode = 200;
-            res.setHeader('Content-Type','text/plain');
-            res.setHeader('Access-control-Allow-Origin',"*");
-        
-        
-        res.end("BalaVinay");
-        //console.log(res)
+            res.setHeader('Content-Type', 'text/plain');
+            res.setHeader('Access-Control-Allow-Origin', "*");
+
+            res.end(JSON.stringify({surname: "Srinivas"}));
         }
     }
-    if(req.method == 'OPTION') {
-        res.statusCode  = 200;
-        res.setHeader('Content-Type', 'appliction/json');
-        res.setHeader('Acces-Control-Allow-Orgin','http://127.0.0.1:5500');
-        res.setHeader('Acces-Control-Allow-Method',"Post,Get,OPTION");
-        res.setHeader('Acces-Control-Allow-Header','*');
-        res.end('OK');
-    }
-    if(req.method == "POST") {
-        //console.log(req.boby());
-        console.log('post method...')
-        res.statusCode =  200;
-        res.setHeader('Content-Type','text/plain');
-        res.setHeader('Acces-Control-Allow-origin',"*");
-
-
-        res.end(JSON.stringify({surname: "KUMAR"}));
-        //console.log
-
-    }
-
-}
+})
+server.listen(port, hostname, () => {
+    console.log('Server running at http://$(hostname):$(port)/');
+})   
